@@ -1,1 +1,1 @@
-com/ibm/cobol/*
+org/omp/cobol/*
