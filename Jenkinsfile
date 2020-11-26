@@ -10,12 +10,6 @@ pipeline {
     }
 
     stages {
-	    stage ("Print env") {
-            steps {
-                //sh 'printenv'
-                echo sh(script: 'env|sort', returnStdout: true)
-            }
-      	}
 	    stage ('Start') {
 	      steps {
 	        // send to email
