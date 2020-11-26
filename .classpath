@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry excluding="src/main/zOS/|src/main/zOS/org.omp.asm/|src/main/zOS/org.omp.cobol/|src/main/zOS/org.omp.JCL/" kind="src" path=""/>
+	<classpathentry excluding="org/omp/asm/|org.omp.asm/|org/omp/cobol/|org.omp.cobol/|org/omp/JCL/|org.omp.JCL/" kind="src" path="src/main/zOS"/>
+	<classpathentry kind="src" path="src/main/zOS/org.omp.asm"/>
+	<classpathentry kind="src" path="src/main/zOS/org.omp.cobol"/>
+	<classpathentry kind="src" path="src/main/zOS/org.omp.JCL"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>
