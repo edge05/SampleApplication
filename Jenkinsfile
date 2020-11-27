@@ -5,6 +5,7 @@ pipeline {
         projectClean		= 'true'
         DBBClean			= 'false'
         projectDelete		= 'false'
+        Debug				= 'false'
         CollectionName		= 'SampleApplication'
 
     }
@@ -50,7 +51,20 @@ pipeline {
             	sh "${env.GROOVYZ_HOME}/groovyz --classpath .:${env.POLY_CLASSPATH} $WORKSPACE/build/build.groovy --clean --collection ${env.CollectionName}"
             }
         }
-		stage("Build") {
+		stage("Build-Debug") {
+			when {
+				expression { env.Debug.toBoolean()}
+	        }
+            steps {
+            	sh "export DBB_HOME=${env.DBB_HOME}"
+            	sh "export DBB_CONF=${env.DBB_CONF}"
+ 				sh "${env.GROOVYZ_HOME}/groovyz --classpath .:${env.POLY_CLASSPATH} $WORKSPACE/build/build.groovy --debug --collection ${env.CollectionName}"
+            }
+        }
+        stage("Build") {
+			when {
+	            expression { !env.Debug.toBoolean()}
+	        }
             steps {
             	sh "export DBB_HOME=${env.DBB_HOME}"
             	sh "export DBB_CONF=${env.DBB_CONF}"
