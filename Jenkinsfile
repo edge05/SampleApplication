@@ -3,7 +3,7 @@ pipeline {
 
     environment {
         projectClean		= 'true'
-        DBBClean			= 'true'
+        DBBClean			= 'false'
         projectDelete		= 'false'
         CollectionName		= 'SampleApplication'
 
