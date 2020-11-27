@@ -5,7 +5,7 @@ pipeline {
         projectClean		= 'true'
         DBBClean			= 'false'
         projectDelete		= 'false'
-        Debug				= 'false'
+        Debug				= 'true'
         CollectionName		= 'SampleApplication'
 
     }
