@@ -1,2 +1,2 @@
-org/omp/asm/*/*.asm
+org/omp/asm/app1/*.asm
 org/omp/cobol/app2/*.cbl
